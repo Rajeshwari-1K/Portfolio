@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raja Rajeshwari K Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2c3e50; /* crisp circle */
+  box-shadow: 0 0 15px #2c3e50; /* subtle glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #2c3e50; /* slight glow on hover */
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+background-color: #2c3e50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.scroll-top:hover {
+background-color: #2c3e50;
+  transform: scale(1.1);
+}
+
+.connect-logo {
+  font-size: 2.5em; /* controls icon size */
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.connect-logo:hover {
+  transform: scale(1.2); /* grow on hover */
+  color: #2c3e50;       /* optional: change color on hover */
+}
+
+
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.contact-icon i, 
+.contact-icon img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+background-color: #2c3e50;/* matches your portfolio theme */
+  color: white;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+
+    /* Navbar */
+nav {
+  background-color: white;
+  border: 2px solid #2c3e50;
+  border-radius: 300px;
+  width: 50%;        /* wider than fit-content, adjusts to screen */
+  max-width: 1200px; /* prevents it from being too huge on large screens */
+  margin: 20px auto;
+  padding: 12px 60px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: sticky;
+  top: 10px;
+  z-index: 1000;
+
+  /* subtle glow */
+  box-shadow: 0 0 10px #2c3e50;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+nav:hover {
+  box-shadow: 0 0 15px #2c3e50;
+  transform: scale(1.02);
+}
+  nav a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 0;
+}
+
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #2c3e50;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}  
+    nav a:hover {
+      color:#2c3e50;
+    }
+
+    /* Header Section */
+   .header {
+  display: flex;
+  flex-direction: row;       /* horizontal */
+  align-items: center;
+  justify-content: center;   /* center the whole header */
+  gap: 30px;
+  flex-wrap: wrap;           /* stacks nicely on small screens */
+  margin-bottom: 30px;
+}
+
+    .header .name-role {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .header h3 {
+      margin: 5px 0 0 0;
+      color: #555;
+      font-weight: normal;
+    }
+
+    /* About Me Section */
+    .about {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+      font-size: 1em;
+     text-align: justify;
+    }
+.about p {
+  line-height: 1.8;
+}
+
+    /* Skills Section */
+   
+/* ===== Skills Section ===== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+
+/* Center last card */
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.skills-grid .skill-card:nth-child(5) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: auto; /* instead of 400px */
+  max-width: 400px;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: linear-gradient(135deg, #2c3e50, #2c3e50);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+}
+
+.skill-card:hover h3 { color: white; }
+.skill-card:hover .skill-item { background-color: white; color: #2c3e50; }
+
+.skill-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+ 
+}
+
+
+
+.skill-card h3 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  transition: 0.3s;
+}
+
+/* Only for Programming Card */
+.skills-grid .skill-card:first-child .skill-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  justify-items: center;
+}
+
+#thankyou h2 {
+  text-decoration: none; /* removes underline if any */
+}
+
+#thankyou hr {
+  display: none; /* hides any <hr> line inside this section */
+}
+
+#thankyou h2::after {
+  display: none; /* removes the pseudo-element underline */
+}
+
+.skill-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  justify-items: center;
+}
+
+/* Center 3rd item in every card */
+.skill-items .skill-item:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+
+.skills-section {
+  width: 100%;
+  display: block;   /* VERY IMPORTANT */
+}
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 25px;
+background-color: #2c3e50;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+.skill-logo {
+  width: 22px;
+  height: 22px;
+  background: white;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+/* ===== Hover Effect ===== */
+
+
+
+
+
+    
+
+
+
+
+
+
+    /* Footer */
+footer {
+  background-color: #2c3e50;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+}
+
+.footer-track {
+  display: inline-block;
+  animation: scrollLeft 15s linear infinite;
+}
+.footer-track:hover {
+  animation-play-state: paused;
+}
+
+.footer-track span {
+  display: inline-block;
+  padding-left: 100%;
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+    
+/* Section title style */
+section h2 {
+  display: inline-block;        /* shrink width to text only */
+  position: relative;
+  color: #2c3e50;
+  margin-bottom: 20px;          /* keeps space to content */
+}
+
+/* Add underline using pseudo-element */
+section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;                 /* distance from text, adjust if needed */
+  width: 100%;                  /* same width as text */
+  height: 3px;                  /* thickness of underline */
+  background-color: #2c3e50;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex: 0 1 80%; /* stack projects on small screens */
+    margin: 0 auto;
+  }
+}
+.project-card {
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: 
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+}
+.projects-row:last-child {
+  justify-content: center; /* center the last row (Project 3) */
+}
+.projects-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start; /* first row default */
+}
+
+
+
+/* Projects Section */
+.projects-section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.projects-section h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.project-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%; /* makes it round */
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column; /* stack rows */
+  gap: 30px; /* space between rows */
+}
+
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+
+.project-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, #2c3e50, #2c3e50);
+}
+
+.project-card:hover h3,
+.project-card:hover p,
+.project-card:hover .project-keywords {
+  color: white;
+}
+
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+
+.project-card:hover .tech-item {
+  background-color: white;
+  color: #2c3e50;
+}
+.project-img {
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.1);
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+  text-align: center;
+}
+.project-info h3 {
+  margin: 10px 0;
+  color: #2c3e50;
+}
+
+.project-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.project-keywords {
+  font-size: 0.9em;
+  color: #555;
+  margin: 15px 0;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tech-item {
+  background-color: #2c3e50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.project-card:nth-child(3) {
+  margin-left: auto;
+  margin-right: auto; /* Center the 3rd project */
+}
+
+
+
+.link-logo {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+}
+
+.link-logo:hover {
+  transform: scale(1.2);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; /* adjust to match navbar height */
+}
+      .header img {
+        width: 150px;
+        height: 150px;
+      }
+      
+
+/* Coding Section */
+.coding-section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.coding-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.coding-card {
+  display: block;
+  width: 300px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
+  overflow: hidden;
+}
+
+.coding-card:hover {
+  transform: scale(1.1); /* zoom effect */
+  background: linear-gradient(135deg, #2c3e50, #2c3e50); /* color change */
+  box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+  color: white;
+}
+
+.coding-card-content {
+  padding: 20px;
+}
+
+.coding-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.coding-card h3 {
+  margin: 10px 0;
+  color:#2c3e50;
+  transition: 0.3s;
+}
+
+.coding-card:hover h3,
+.coding-card:hover p {
+  color: white;
+}
+img { max-width: 100%; height: auto; }
+
+.coding-screenshot {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+
+/* Box around problems solved */
+.problems-solved {
+  display: inline-block;
+  background-color: #e67e22; /* orange box */
+  color: white;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 12px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.coding-card:hover .problems-solved {
+  background-color: white;
+  color:#2c3e50;
+}
+
+.contact-wrapper{
+  max-width: 500px;   /* controls total width */
+  margin: 0 auto;     /* centers whole block */
+  padding: 20px;
+}
+
+.contact-wrapper hr{
+  width: 80px;
+  border: 2px solid #2c3e50;
+  margin: 10px auto 30px auto;
+}
+
+.contact-card{
+  width: 100%;        /* card follows wrapper width */
+}
+
+
+.contact-card {
+  width: 300px;      /* fixed width */
+  margin: 30px auto; /* auto left/right centers it */
+  padding: 15px;     /* card padding */
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-card input,
+.contact-card textarea {
+  width: 100%;       /* keeps inputs full width inside smaller card */
+  box-sizing: border-box; /* important to respect padding inside card */
+  padding: 8px;
+  font-size: 0.9em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.9em;
+}
+
+.section-line {
+  width: 80px;
+  border: 2px solid #2c3e50;
+  margin: 10px auto 40px auto;
+}
+
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+  outline: none;
+  border: 2px solid #2c3e50;
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+.contact-card button {
+  width: 100px;  /* smaller button */
+  padding: 12px;
+  background-color: #2c3e50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: center;
+}
+
+.contact-card button:hover {
+  background-color: #2c3e50;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .contact-card {
+    width: 90%;  /* stays responsive on mobile */
+    padding: 20px;
+  }
+.contact-card button {
+  width: 100%;       /* button matches card width */
+  padding: 10px;
+}
+}
+</style>
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about-section">About Me</a>
+    <a href="#skills">Skills</a>
+   <a href="certificates.html">Certifications</a>
+<a href="resume.pdf" target="_blank">Resume</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact Me</a>
+  </nav>
+  
+<section id="about-section">
+<h2>ABOUT ME</h2>
+
+  <div class="header">
+  <img src="images/photooo.jpg" alt="Raja Rajeshwari K" class="profile-photo">
+    <div class="name-role">
+      <h1>RAJA RAJESHWARI K</h1>
+      <h3>Aspiring Data Analyst / Web Developer</h3>
+    </div>
+  </div>
+
+  <div class="about">
+    <p>
+      I am an ambitious Computer Science student with a strong foundation in programming, databases, and problem-solving. Passionate about building innovative solutions, I enjoy working on projects that challenge my technical skills and creativity. With hands-on experience in web development, data analysis, and machine learning, I aim to contribute to impactful projects while continuously learning industry best practices. My goal is to combine technical expertise with problem-solving abilities to drive meaningful results and grow as a technology professional.</p>
+  </div>
+</section>
+
+<section class="skills-section" id="skills">
+  <h2>SKILLS SET</h2>
+
+  <div class="skills-grid">
+
+    <!-- Programming -->
+    <div class="skill-wrapper">
+      <h3 class="skill-title">Programming</h3>
+      <div class="skill-card">
+        <div class="skill-items">
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="skill-logo">Python
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="skill-logo">Java
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="skill-logo">C
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Analytics -->
+    <div class="skill-wrapper">
+      <h3 class="skill-title">Data Analytics</h3>
+      <div class="skill-card">
+        <div class="skill-items">
+          <div class="skill-item">
+            <img src="images/excel.png" class="skill-logo">Excel
+          </div>
+          <div class="skill-item">
+            <img src="images/powerbi.png"class="skill-logo">Power BI
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Front End Development -->
+    <div class="skill-wrapper">
+      <h3 class="skill-title">Front End Development</h3>
+      <div class="skill-card">
+        <div class="skill-items">
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="skill-logo">HTML
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="skill-logo">CSS
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="skill-logo">JavaScript
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend Development -->
+    <div class="skill-wrapper">
+      <h3 class="skill-title">Backend Development</h3>
+      <div class="skill-card">
+        <div class="skill-items">
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="skill-logo">MongoDB
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="skill-logo">MySQL
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-wrapper">
+      <h3 class="skill-title">Tools</h3>
+      <div class="skill-card">
+        <div class="skill-items">
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="skill-logo">Git
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="skill-logo">VS Code
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" class="skill-logo">Jupyter
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Coding Proficiency Section -->
+<section class="coding-section" id="coding">
+  <h2>Coding Proficiency</h2>
+ 
+
+  <div class="coding-grid">
+    <!-- LeetCode Card -->
+   <a href="https://leetcode.com/Rajeshwari-1K/" target="_blank" class="coding-card">
+      <div class="coding-card-content">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode Logo" class="coding-logo">
+        <h3>LeetCode</h3>
+        <img src="images/leetcode.png" alt="LeetCode Screenshot" class="coding-screenshot">
+        <div class="problems-solved">300+ Problems Solved</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<!-- Projects Section -->
+<section class="projects-section" id="projects">
+  <h2>PROJECTS</h2>
+
+  <div class="projects-grid">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-header">
+          <img src="images/logoexo.png" alt="ExoHabit AI Logo" class="project-logo">
+          <h3>ExoHabit AI</h3>
+        </div>
+
+        <img src="images/exohabitAi.png" alt="ExoHabit AI" class="project-img">
+
+        <p class="project-keywords">
+          🚀 Predicting Life Beyond Earth with AI | 🌠 AI Meets the Cosmos | 🪐 Mapping New Worlds Using AI
+        </p>
+
+        <div class="project-tech">
+          <span class="tech-item">Python</span>
+          <span class="tech-item">Machine Learning</span>
+          <span class="tech-item">HTML/CSS</span>
+          <span class="tech-item">JavaScript</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/Rajeshwari-1K/Habitability-of-Exoplanets" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="link-logo">
+          </a>
+          <a href="https://habitability-of-exoplanets-lszy.onrender.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png" class="link-logo">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-header">
+          <img src="images/agrilogo.png" alt="AgriSense AI Logo" class="project-logo">
+          <h3>AgriSense AI</h3>
+        </div>
+
+        <img src="images/agrisenseAi.png" alt="AgriSense AI" class="project-img">
+
+        <p class="project-keywords">
+          🌱 AI-powered farming | 🚜 Smarter crops | 💡 Data-driven agriculture insights
+        </p>
+
+        <div class="project-tech">
+          <span class="tech-item">Python</span>
+          <span class="tech-item">Machine Learning</span>
+          <span class="tech-item">HTML/CSS</span>
+          <span class="tech-item">JavaScript</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/Rajeshwari-1K/AgriSense-AI" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="link-logo">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-header">
+          <img src="images/booklogo.png" alt="Booksky Logo" class="project-logo">
+          <h3>Booksky</h3>
+        </div>
+
+        <img src="images/booksky.png" alt="Booksky" class="project-img">
+
+        <p class="project-keywords">
+          📚 Describe it, find it | 🔍 Search books by memory | 💡 Smart book discovery
+        </p>
+
+        <div class="project-tech">
+          <span class="tech-item">HTML</span>
+          <span class="tech-item">CSS</span>
+          <span class="tech-item">JavaScript</span>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/Rajeshwari-1K/Booksky" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="link-logo">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Contact Me Section -->
+<section id="contact">
+  <div class="contact-wrapper">
+    <h2>CONTACT ME</h2>
+    
+
+    <div class="contact-card">
+ <form action="mailto:kabilanrajarajeshwari@gmail.com" method="POST" enctype="text/plain">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+  <label for="subject">Subject:</label>
+  <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+
+  <label for="message">Description:</label>
+  <textarea id="message" name="message" placeholder="Type something..." rows="5" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+    </div>
+  </div>
+</section>
+
+
+<section id="thankyou" style="padding: 40px 20px; background-color: #f5f5f5; text-align: center;">
+  <h2>THANK YOU FOR VISITING MY PORTFOLIO!</h2>
+  <p>If you would like to get in touch, you can reach me at:</p>
+  
+  <div style="margin-top: 20px; display: flex; justify-content: center; gap: 25px; font-size: 2em;">
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/raja-rajeshwari-k-1382052a1/" target="_blank" class="contact-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+    </a>
+
+    <!-- Gmail -->
+ <a href="mailto:kabilanrajarajeshwari@gmail.com" class="contact-icon">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email">
+</a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/Rajeshwari-1K" target="_blank" class="contact-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+    </a>
+
+    <!-- LeetCode -->
+   <a href="https://leetcode.com/Rajeshwari-1K/" target="_blank" class="contact-icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode">
+    </a>
+
+  </div>
+</section>
+<a href="#about-section" class="scroll-top">
+  <i class="fas fa-arrow-up"></i>
+</a>
+
+ <footer>
+  <div class="footer-track">
+    <span>
+      © 2026 Raja Rajeshwari K. All Rights Reserved. 
+         </span>
+  </div>
+</footer>
+
+
+</body>
+</html>
